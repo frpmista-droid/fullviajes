@@ -5,8 +5,6 @@
 **Alcance de esta auditoría:** solamente este proyecto (repositorio `frpmista-droid/fullviajes` y su Pull Request #2). No se revisó, tocó ni conectó ningún otro sistema de Full Viajes.
 **Estado:** no se programó nada, no se tocó producción y el pull request sigue en borrador.
 
-> La versión anterior de esta auditoría proponía construir Marketing Pro dentro de FULL VIAJES 360. **Esa propuesta queda descartada**: el proyecto es independiente y no comparte CRM, reservas, usuarios, base de datos ni interfaz con ningún otro sistema.
-
 ---
 
 ## 1. Auditoría del proyecto
@@ -95,7 +93,7 @@ No se guarda ningún dato personal y no se conecta con ningún otro sistema.
 | Claude en Chrome | En tu computadora, en sesiones supervisadas, con un usuario técnico de permisos mínimos en Marketing Pro (lee la cola y registra resultados; no puede reanudar después de una detención por seguridad). |
 | Copias de seguridad | Respaldo diario propio de la base de Marketing Pro. |
 
-**Alternativa:** si preferís no usar el hosting de Ferozo, Marketing Pro puede funcionar en otro servidor económico. Lo importante es que tenga su propia base y su propio dominio o carpeta. A decidir.
+**Alternativa:** si preferís no usar tu hosting actual, Marketing Pro puede funcionar en otro servidor económico. Lo importante es que tenga su propia base y su propio dominio o carpeta. A decidir.
 
 ### Datos que guarda
 
@@ -115,7 +113,7 @@ No se guarda ningún dato personal y no se conecta con ningún otro sistema.
 |---|---|
 | Este repositorio | Versionado en Git; no se borró nada (versiones anteriores en `docs/anteriores/`). |
 | Otros sistemas de Full Viajes | **No se tocan.** |
-| Hosting (si se usa Ferozo) | Antes de crear la carpeta y la base de Marketing Pro, copia completa del hosting desde el panel de Ferozo, para garantizar que el WordPress no se vea afectado. |
+| Hosting | Antes de crear la carpeta y la base de Marketing Pro, copia completa del hosting desde su panel, para que la web actual no se vea afectada. |
 
 ---
 
@@ -134,14 +132,14 @@ Cada módulo en una rama separada, probado y mostrado antes de seguir. **Nada va
 | 6 | **Consultas y estadísticas** | Enlaces de seguimiento, registro de consultas por código, dashboard con los indicadores del maestro. | Una consulta de prueba de punta a punta. |
 | 7 | **Sesiones supervisadas con Claude en Chrome** | Guía de trabajo grupo por grupo (etapas 1 a 7) conectada a Marketing Pro; freno ante advertencias. | Sesión real supervisada con 5 grupos. |
 
-**Quedan fuera del alcance:** CRM, reservas, ventas, conexión con FULL VIAJES 360, Página de Facebook, Instagram y anuncios pagos.
+**Quedan fuera del alcance:** CRM, reservas, ventas, conexión con cualquier otro sistema, Página de Facebook, Instagram y anuncios pagos.
 
 ---
 
 ## 8. Decisiones pendientes
 
 1. **Toque manual en grupos:** ¿aceptás que publicar en grupos quede como intervención manual (unos 20 segundos por grupo), que es lo que exige el propio maestro al no haber una vía autorizada?
-2. **Dónde se aloja:** ¿carpeta o subdominio propio en Ferozo, con base de datos nueva y exclusiva, u otro servidor?
+2. **Dónde se aloja:** ¿carpeta o subdominio propio en tu hosting actual, con base de datos nueva y exclusiva, u otro servidor?
 3. **Quién publica:** ¿solo vos, o también personas del equipo desde sus cuentas?
 4. **Abandono de grupos:** ¿deshabilitado y con un toque tuyo, como se recomienda?
 5. **Medición de consultas:** ¿te sirve la propuesta del punto 4 (clics automáticos + registro del código, sin datos personales)?
