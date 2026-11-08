@@ -28,8 +28,8 @@ Se puede automatizar **casi todo el trabajo**: armar la campaña, elegir grupos,
 | Función | Cómo |
 |---|---|
 | Cargar la campaña una sola vez | Sección CAMPAÑA AUTOMÁTICA: imágenes, textos, viaje, enlace de WhatsApp, exclusiones. |
-| Excluir grupos de micros y fútbol | Filtro por palabras clave en el nombre y la descripción ("micro", "colectivo", "pasajes de micro", "fútbol", "hinchas", nombres de clubes, etc.), editable. Además de la lista de exclusión manual. |
-| Clasificar grupos aptos para turismo | Puntaje por tipo de grupo (compra y venta, barrial, viajes, jubilados), ciudad, cantidad de miembros, resultados anteriores. |
+| Excluir grupos de micros y fútbol | Filtro por palabras completas en el nombre y la descripción ("micros", "colectivos", "fútbol", "hinchas", nombres de clubes, etc.), editable, más la lista de exclusión manual. Los grupos de compra y venta, clasificados y comunidades que coincidan **no se excluyen solos**: quedan para revisar (módulo 21.E del prompt). |
+| Clasificar y priorizar grupos | Puntaje geográfico (Concepción del Uruguay 100, costa del Uruguay y Concordia 75-90, resto de Entre Ríos 60) combinado con actividad, reglas, tipo, tamaño y resultados (módulo 21.C del prompt). Incluye compra y venta, clasificados, comunidades y emprendedores, no solo turismo. |
 | Interpretar las reglas | Claude lee el texto de las reglas (una vez por grupo, y cada 30 días) y decide: permite / permite con condiciones / prohíbe. |
 | Elegir imagen y texto para cada grupo | Según el público del grupo y lo que ya se publicó ahí. |
 | Alternar creatividades | Rotación para no mostrarle siempre la misma pieza a los mismos miembros. **Precios, fechas y condiciones quedan bloqueados:** salen siempre de la ficha del viaje y no se pueden alterar. |
@@ -51,7 +51,7 @@ Se puede automatizar **casi todo el trabajo**: armar la campaña, elegir grupos,
 |---|---|---|
 | Publicar en un grupo | Meta eliminó la publicación por API. | **Cola "publicar en un toque"** (ver punto 4). |
 | Saber si quedó pendiente, aprobada o rechazada | Facebook no lo informa a sistemas externos. | Un botón por publicación: "Publicada / Quedó pendiente / Rechazada". Una ronda semanal para actualizar las pendientes. |
-| Obtener la lista de grupos donde estás y sus reglas | No hay API. | Carga inicial única: pegar la lista o hacer una sesión de lectura supervisada con Claude en Chrome. Después se mantiene sola con los resultados. |
+| Buscar grupos, unirse y leer sus reglas | No hay API para buscar ni para unirse a grupos. | El sistema genera la lista de búsquedas por localidad y tipo, en orden de prioridad; la búsqueda se hace en sesiones supervisadas y unirse lo decidís vos, de a pocos grupos por día (módulo 21.F del prompt). |
 | Detectar advertencias de Facebook | Facebook no avisa a sistemas externos. | Botón rojo "Facebook me mostró una advertencia" en la cola: detiene todo al instante. Los canales por API (Página, Instagram, anuncios) sí detectan los errores solos. |
 | Responder consultas | Es una conversación comercial. | Claude prepara respuestas sugeridas; las envía la vendedora. |
 
@@ -101,7 +101,8 @@ No hay que aprobar cada publicación: el contenido ya está validado en la campa
 - **Imágenes:** de 1 a 20.
 - **Textos:** varios, con marcadores como `{precio}`, `{fecha}`, `{whatsapp}`.
 - **WhatsApp:** número; el sistema genera un enlace con código por canal y por grupo.
-- **Exclusiones:** grupos puntuales y palabras clave (por defecto: micros, colectivos, pasajes, fútbol, hinchadas, clubes).
+- **Exclusiones:** grupos puntuales y palabras clave (por defecto: micros, colectivos, fútbol, hinchadas, clubes), aplicadas como en el módulo 21.E del prompt.
+- **Zonas:** por defecto, el orden de prioridad geográfica del módulo 21 (Concepción del Uruguay primero).
 - **Canales:** Página de Facebook, Instagram, anuncios (con presupuesto máximo), web, grupos.
 - **Fechas:** inicio y fin; se corta sola si el viaje vence o se agota.
 

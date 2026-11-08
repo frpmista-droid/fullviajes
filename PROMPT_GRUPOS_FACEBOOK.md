@@ -3,7 +3,7 @@
 
 > **Aviso sobre los módulos 1 a 14.** El prompt original no apareció ni en este proyecto ni en las sesiones de Claude Code que se pudieron revisar. Los módulos 1 a 14 de este documento son una **reconstrucción propuesta**, redactada a partir de lo que se habló después (módulos 15 a 19) y del objetivo comercial. Compararlos con el original si aparece y corregir lo que no coincida.
 >
-> Los módulos 15 a 19 son los que aprobaste. El módulo 20 suma las 8 mejoras pedidas.
+> Los módulos 15 a 19 son los que aprobaste. El módulo 20 suma las 8 mejoras pedidas. El módulo 21 (priorización geográfica, costa del Uruguay) es **prioritario** y manda sobre los demás a la hora de elegir grupos.
 
 ---
 
@@ -52,8 +52,8 @@ No sos un robot de publicación masiva. Sos un asistente que:
 Mantener una ficha por grupo con:
 
 - Nombre y enlace.
-- Ciudad o zona (por ejemplo: Rosario, Funes, Gran Rosario, provincia de Santa Fe).
-- Tipo: compra y venta, comunidad barrial, viajes, jubilados, colectividades, etc.
+- Localidad y zona geográfica, con su puntaje (módulo 21).
+- Tipo: compra y venta, clasificados, turismo y viajes, comunidad local, emprendedores y comercios (módulo 21.B).
 - Cantidad de miembros y actividad aproximada (publicaciones por día).
 - Si soy miembro, si mi solicitud está pendiente o si no participo.
 - Si permite publicaciones comerciales (según sus reglas).
@@ -105,7 +105,7 @@ Cada promoción debe tener:
   2. Qué incluye.
   3. Precio y forma de pago (si las reglas del grupo permiten precios).
   4. Llamado a la acción con contacto.
-- Adaptar el texto a las reglas y al público de cada grupo.
+- Adaptar el texto a las reglas, al público y a la localidad de cada grupo (módulo 21.D).
 - Las variaciones entre grupos son para adaptar el mensaje a cada público, **no para disfrazar una publicación repetida** ni evitar filtros de spam.
 - No usar mayúsculas excesivas, promesas falsas, urgencias inventadas ("últimos 2 lugares" si no es cierto) ni emojis en exceso.
 - Incluir siempre el nombre **Full Viajes y Turismo**.
@@ -422,3 +422,108 @@ Un panel web, con mi usuario y contraseña, donde pueda:
 - Se registra la incidencia con fecha, grupo, captura de pantalla y descripción.
 - En ese estado nada funciona hasta que yo revise la situación y lo reactive a mano desde el dashboard, indicando el motivo.
 - Este estado es distinto de "pausado": solamente se sale con una revisión explícita.
+
+---
+
+## 21. BÚSQUEDA Y PRIORIZACIÓN GEOGRÁFICA DE GRUPOS — COSTA DEL URUGUAY
+
+**ESTA FUNCIÓN ES PRIORITARIA.**
+
+El sistema debe identificar y aprovechar todos los grupos de Facebook de las localidades donde Full Viajes y Turismo puede captar pasajeros.
+
+**No limitarse a grupos de turismo.** Los grupos de compra y venta, clasificados, vecinos, comunidades locales y promociones comerciales también son importantes, siempre que permitan publicidad.
+
+**Estrategia de expansión:** primero dominar Concepción del Uruguay; después Colón, San José, Villa Elisa, Gualeguaychú y Concordia; después el resto de Entre Ríos.
+
+### A. Zonas geográficas y puntaje
+
+El puntaje geográfico indica **prioridad**, no garantiza resultados.
+
+| Zona | Localidades | Puntaje |
+|---|---|---|
+| **Prioridad máxima — Concepción del Uruguay** | Concepción del Uruguay (también "C. del Uruguay", "CdelU", "La Histórica") | **100** |
+| | Caseros, Pronunciamiento, San Justo, Herrera, Colonia Elía, Primero de Mayo, Santa Anita, Colonia Los Ceibos, Las Moscas | **95** |
+| **Prioridad alta — Costa del Uruguay** | Colón, San José, Gualeguaychú | **90** |
+| | Villa Elisa, Ubajay, Basavilbaso, Urdinarrain | **85** |
+| | Liebig, Pueblo Belgrano, Gilbert, Gualeguay, Rocamora, Rosario del Tala | **75** |
+| **Prioridad alta — Concordia y región** | Concordia | **90** |
+| | Federación, Chajarí, Villa del Rosario, San Salvador, General Campos, Puerto Yeruá, Los Charrúas, La Criolla, Colonia Ayuí, Estancia Grande | **75** |
+| **Prioridad complementaria** | Paraná, Villaguay, Nogoyá, Victoria, Diamante, Crespo, Federal, Feliciano, La Paz | **60** |
+| **Otras localidades de Entre Ríos** | Detectadas por el sistema | **60** (o 75 si están a menos de 50 km de Concepción del Uruguay) |
+| **Grupos provinciales** | "Compra y venta Entre Ríos", "Clasificados Entre Ríos", etc. | **70** |
+
+No limitarse a esta lista: proponer otras localidades cercanas de Entre Ríos que representen oportunidades. Las localidades nuevas se agregan con mi aprobación.
+
+### B. Tipos de grupos a buscar
+
+1. **Compra y venta:** compra y venta de la localidad, compra y venta Entre Ríos, feria de usados, clasificados de compra y venta, venta de artículos y servicios, compra, venta y permuta.
+2. **Clasificados:** clasificados de la ciudad, de Entre Ríos y de barrios, avisos comerciales, emprendedores locales, servicios y promociones.
+3. **Turismo y viajes:** turismo en Entre Ríos, viajes y excursiones, vacaciones, escapadas, destinos turísticos, ofertas de viajes, viajes grupales.
+4. **Comunidades locales:** vecinos de la ciudad, comunidad de cada localidad, barrios, información local, recomendaciones, familias de la zona.
+5. **Emprendedores y comercios:** emprendedores de Entre Ríos, comercios locales, negocios de la ciudad, ferias y emprendedores, promociones comerciales.
+
+**Cuidado con los grupos de compra y venta:** muchos prohíben "servicios" o solo permiten publicidad un día fijo. Siempre leer las reglas (módulo 5).
+
+### C. Puntaje final de cada grupo
+
+El puntaje final combina la geografía con la calidad real del grupo:
+
+| Factor | Peso al empezar (sin historial) | Peso con historial (después de 4 publicaciones) |
+|---|---|---|
+| Geografía (tabla A) | 45 % | 25 % |
+| Actividad reciente (publicaciones y comentarios por día) | 20 % | 10 % |
+| Reglas comerciales (permite / con condiciones) | 15 % | 10 % |
+| Relevancia turística del tipo de grupo | 10 % | 5 % |
+| Tamaño del grupo | 10 % | 5 % |
+| Resultados: aprobaciones, consultas y reservas | — | 45 % |
+
+- Un grupo chico pero activo puede valer más que uno con miles de miembros inactivos: por eso la actividad pesa más que el tamaño.
+- Con historial, mandan los resultados: un grupo que trae pasajeros sube aunque esté lejos.
+- Los pesos se pueden ajustar desde el dashboard.
+- Un grupo en la lista negra (módulo 20.2) queda fuera, tenga el puntaje que tenga.
+
+### D. Difusión adaptada a cada localidad
+
+Adaptar la comunicación al origen de los miembros del grupo. Ejemplos:
+
+- **Concepción del Uruguay:** "¡Desde La Histórica seguimos preparando nuevas escapadas para que puedas conocer destinos increíbles!"
+- **Colón:** "¿Sos de Colón y estás pensando en tus próximas vacaciones? En Full Viajes tenemos propuestas para vos."
+- **Gualeguaychú:** "¡Tenemos nuevas propuestas de viajes y excursiones para disfrutar durante todo el año!"
+- **Concordia:** "¿Buscás una escapada o unas vacaciones diferentes? Consultanos por nuestras próximas salidas."
+
+**Regla:** no afirmar que hay salida desde una localidad si no está confirmada. Cada viaje tiene en su ficha el campo **"salidas confirmadas desde"**; el texto solo puede mencionar una salida local si esa localidad figura ahí.
+
+### E. Reglas de exclusión
+
+Excluir:
+
+- Grupos de micros y colectivos.
+- Grupos de fútbol.
+- Grupos deportivos sin relación turística.
+- Grupos que prohíben publicidad.
+- Grupos sin ninguna relación comercial o turística.
+
+**Los grupos de compra y venta, clasificados y comunidades locales NO se excluyen automáticamente.** Son categorías prioritarias para evaluar.
+
+**Cómo se aplican las palabras clave:**
+
+- Se buscan como palabras completas, para no excluir por error (por ejemplo, "micro" no debe excluir un grupo de compra y venta donde se ofrecen "microondas").
+- Si un grupo de compra y venta o de comunidad coincide con una palabra de exclusión, **no se excluye solo**: queda marcado "revisar" y lo decido yo.
+- La exclusión automática directa aplica solo cuando el grupo es claramente de micros, colectivos o fútbol por su nombre y su descripción.
+
+### F. Cómo se construye la base de grupos
+
+Facebook no ofrece una forma oficial de buscar grupos ni de unirse a ellos desde un sistema. Por eso:
+
+1. **El sistema genera la lista de búsquedas** combinando localidad y tipo: "compra y venta Concepción del Uruguay", "clasificados CdelU", "vecinos de Colón", "emprendedores Gualeguaychú", etc., en el orden de prioridad de la tabla A.
+2. **La búsqueda en Facebook** se hace en sesiones supervisadas (yo o Claude en Chrome mirando la pantalla, solo lectura), empezando por Concepción del Uruguay.
+3. **Unirse a un grupo lo decido y lo hago yo.** El sistema me sugiere a qué grupos sumarme, de a pocos por día, y respetando las preguntas de ingreso de cada grupo con respuestas verdaderas.
+4. Cada grupo encontrado se carga con su ficha (módulo 4), se leen sus reglas (módulo 5) y se calcula su puntaje (21.C).
+5. Se analiza **cada grupo de forma individual**, uno por uno, y se registra su utilidad.
+
+### G. Resultado esperado
+
+- Una base organizada de grupos de toda la región, con localidad, tipo, reglas, puntaje y resultados.
+- Prioridad a Concepción del Uruguay; después la costa del Uruguay y el resto de Entre Ríos.
+- Un mapa de cobertura en el dashboard: cuántos grupos útiles hay por localidad y cuántas consultas y reservas trae cada una.
+- Presencia comercial fuerte en toda la región y consultas desde todas estas localidades.
