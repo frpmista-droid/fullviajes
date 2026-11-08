@@ -20,7 +20,7 @@
 ### Datos pendientes (sin estos no se publica)
 
 - [ ] **Número de WhatsApp** para las consultas.
-- [ ] **¿El viaje es para la misa del Papa León XIV?** La visita está confirmada en la prensa: misa el miércoles 11 a las 10:00 en la plaza de la Basílica. La imagen D dice "Nos vamos a ver al Papa", pero los 3 textos no lo mencionan. Hasta que lo confirmes, los textos no nombran al Papa.
+- [x] **El viaje es para la visita del Papa León XIV** (confirmado por la dirección el 8/11). La prensa confirma la misa del miércoles 11 a las 10:00 en la plaza de la Basílica. Los textos pueden nombrar al Papa, sin prometer cercanía ni ubicación dentro del predio.
 - [ ] **Desde dónde sale y a qué hora** (opcional). Si no se confirma, los textos no mencionan ninguna localidad de salida.
 
 ---
@@ -36,7 +36,7 @@ Las 4 son de la misma promoción, así que cualquier imagen puede ir con cualqui
 | C | `imagenes/C_miercoles11_lujan.webp` | Miércoles 11 · Peregrinación a Luján · 2 lugares por $150.000 |
 | D | `imagenes/D_nos_vamos_a_ver_al_papa.jpg` | Nos vamos a ver al Papa · 11 de noviembre · 2 lugares x $150.000 |
 
-**La imagen D queda en espera** hasta que confirmes que el viaje es para ver al Papa.
+**La imagen D queda habilitada** (viaje para la visita del Papa, confirmado).
 
 ---
 
@@ -100,7 +100,7 @@ En cada grupo el texto **cambia algo, pero sin inventar nada**.
 
 - Fecha, precio, qué incluye ni condiciones.
 - Hora o lugar de salida, hasta que estén confirmados.
-- Al Papa, hasta que confirmes que el viaje es para su misa.
+- Promesas sobre el Papa que no estén confirmadas (por ejemplo, "lo vas a ver de cerca" o "lugar asegurado en la misa").
 - Urgencias que no existan ("últimos lugares", "se agota hoy").
 
 ### Saludos por localidad
