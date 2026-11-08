@@ -2,7 +2,8 @@
 ## Sistema inteligente de difusión, publicidad y captación de pasajeros en Facebook
 
 > **Prompt maestro definitivo**, unificado por la dirección de Full Viajes y Turismo el 8 de noviembre de 2026. Reemplaza a `docs/anteriores/PROMPT_GRUPOS_FACEBOOK_v1.md`.
-> Los ajustes sugeridos a este texto están en `AUDITORIA_Y_PLAN_MARKETING_PRO.md` y **no** se aplicaron acá hasta que se aprueben.
+> Actualizado el mismo día: el proyecto pasa a ser **completamente independiente** (ver el bloque siguiente). Por eso se quitaron el CRM, las reservas y las ventas (secciones 13, 14, 15 y 20).
+> Los ajustes técnicos sugeridos están en `AUDITORIA_Y_PLAN_MARKETING_PRO.md` y **no** se aplicaron acá hasta que se aprueben.
 
 ---
 
@@ -19,6 +20,37 @@ Su misión será aprovechar los grupos de Facebook en los que mi cuenta ya parti
 Debe trabajar con una mentalidad profesional, humana, realista y responsable.
 
 **OBJETIVO PRINCIPAL: QUE FULL VIAJES Y TURISMO CONSIGA MÁS PASAJEROS EN CONCEPCIÓN DEL URUGUAY Y TODA LA REGIÓN.**
+
+---
+
+## IMPORTANTE: PROYECTO COMPLETAMENTE INDEPENDIENTE
+
+**FULL VIAJES MARKETING PRO ES UN PROYECTO COMPLETAMENTE INDEPENDIENTE.**
+
+No debe integrarse ni conectarse con el CRM de Full Viajes, el sistema de reservas, la gestión de pasajeros, la administración financiera ni otros sistemas internos.
+
+No quiero módulos de CRM, gestión de clientes ni administración de reservas.
+
+El único objetivo de este proyecto es gestionar la difusión comercial en grupos de Facebook, analizar comunidades, organizar campañas publicitarias, publicar promociones mediante mecanismos autorizados y medir los resultados de difusión.
+
+Debe tener su propia interfaz, configuración, almacenamiento e historial.
+
+Mantenerlo completamente separado de los demás proyectos de Full Viajes.
+
+### Alcance definitivo
+
+1. **Grupos de Facebook:** detectar y analizar los grupos donde la cuenta ya está unida.
+2. **Clasificación:** compra y venta, clasificados, turismo, comunidades y promociones.
+3. **Geografía:** prioridad Concepción del Uruguay, Colón, San José, Villa Elisa, Gualeguaychú, Concordia y alrededores.
+4. **Exclusiones:** micros, fútbol y grupos que no sirven.
+5. **Publicaciones:** trabajar grupo por grupo, uno por uno.
+6. **Contenido:** cargar imágenes y diferentes textos para alternarlos según la promoción.
+7. **Autonomía:** gestionar publicaciones mediante mecanismos autorizados, sin aprobación individual cuando sea posible.
+8. **Depuración:** dejar de utilizar grupos que nunca aprueban o no aportan resultados.
+9. **Estadísticas:** grupos analizados, publicaciones aprobadas, pendientes, rechazadas y consultas generadas.
+10. **Seguridad:** detenerse ante restricciones o advertencias de Meta.
+
+No se agregan más funcionalidades fuera de este alcance.
 
 ---
 
@@ -375,28 +407,15 @@ Registrar:
 - Grupo.
 - Promoción.
 - Fecha.
-- Consultas.
-- Interesados.
-- Reservas.
-- Ventas.
+- Consultas generadas.
+
+La medición se limita a la **difusión**: cuántas consultas genera cada grupo y cada promoción. No se registran datos personales de quienes consultan, ni reservas, ni ventas: el seguimiento comercial de cada consulta queda fuera de este proyecto.
 
 No inventar atribuciones: si no se puede identificar el grupo de origen, marcarlo como desconocido.
 
-## 14. CRM COMERCIAL
+## 14. (ELIMINADA) CRM COMERCIAL
 
-Crear una sección para administrar potenciales pasajeros.
-
-Estados:
-
-- Nuevo.
-- Consultó.
-- Interesado.
-- Esperando respuesta.
-- Reserva pendiente.
-- Reservado.
-- Venta perdida.
-
-Permitir registrar nombre, teléfono, destino, pasajeros, observaciones y seguimiento.
+Sección quitada: el proyecto es independiente y no incluye CRM, gestión de clientes ni reservas (ver "Proyecto completamente independiente").
 
 ## 15. DASHBOARD
 
@@ -415,10 +434,9 @@ Secciones:
 7. Publicaciones.
 8. Historial.
 9. Consultas.
-10. CRM.
-11. Estadísticas.
-12. Grupos excluidos.
-13. Configuración.
+10. Estadísticas.
+11. Grupos excluidos.
+12. Configuración.
 
 Mostrar indicadores de:
 
@@ -427,11 +445,11 @@ Mostrar indicadores de:
 - Grupos prioritarios.
 - Grupos excluidos.
 - Publicaciones realizadas.
+- Publicaciones aprobadas.
 - Publicaciones pendientes.
-- Consultas.
-- Reservas.
-- Ventas.
-- Conversión comercial.
+- Publicaciones rechazadas.
+- Consultas generadas.
+- Consultas por publicación (por grupo y por promoción).
 
 ## 16. PERSISTENCIA
 
@@ -447,10 +465,9 @@ Mantener un historial completo de:
 - Clasificaciones.
 - Exclusiones.
 - Abandonos.
-- Consultas.
-- Ventas.
+- Consultas generadas.
 
-Utilizar la infraestructura existente sin destruir datos.
+Con almacenamiento propio, separado de cualquier otro sistema de Full Viajes. No destruir datos.
 
 ## 17. CAMPAÑAS AUTÓNOMAS
 
@@ -506,7 +523,7 @@ Implementar por módulos y comprobar cada uno.
 
 Quiero que FULL VIAJES MARKETING PRO se convierta en una herramienta profesional de marketing y captación de pasajeros.
 
-Mi tarea debe ser cargar las promociones, administrar las campañas y consultar los resultados.
+Mi tarea debe ser cargar las promociones, administrar las campañas y consultar los resultados de difusión.
 
 El sistema debe encargarse de analizar los grupos uno por uno, identificar oportunidades, gestionar las publicaciones autorizadas, medir consultas y detectar dónde vale la pena invertir tiempo.
 
@@ -521,4 +538,4 @@ Quiero que Full Viajes y Turismo se convierta en una de las agencias con mayor p
 Prefiero hacer diez trabajos correctamente que cien mal hechos.
 No quiero velocidad artificial. Quiero resultados reales.
 
-**La métrica de éxito no es la cantidad de grupos donde se publica, sino la cantidad de pasajeros que llegan gracias a esos grupos.**
+**La métrica de éxito no es la cantidad de grupos donde se publica, sino la cantidad de consultas que llegan gracias a esos grupos.**

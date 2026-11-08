@@ -1,117 +1,111 @@
-# FULL VIAJES MARKETING PRO — Auditoría previa y plan de trabajo
+# FULL VIAJES MARKETING PRO — Auditoría y plan de trabajo (proyecto independiente)
 
 **Fecha:** 8 de noviembre de 2026
-**Responde a:** sección 19 del prompt maestro (`PROMPT_MAESTRO_MARKETING_PRO.md`).
+**Responde a:** sección 19 del prompt maestro (`PROMPT_MAESTRO_MARKETING_PRO.md`), con el alcance definitivo de proyecto **completamente independiente**.
+**Alcance de esta auditoría:** solamente este proyecto (repositorio `frpmista-droid/fullviajes` y su Pull Request #2). No se revisó, tocó ni conectó ningún otro sistema de Full Viajes.
 **Estado:** no se programó nada, no se tocó producción y el pull request sigue en borrador.
 
+> La versión anterior de esta auditoría proponía construir Marketing Pro dentro de FULL VIAJES 360. **Esa propuesta queda descartada**: el proyecto es independiente y no comparte CRM, reservas, usuarios, base de datos ni interfaz con ningún otro sistema.
+
 ---
 
-## 1. Auditoría del proyecto actual
+## 1. Auditoría del proyecto
 
-### Repositorio `frpmista-droid/fullviajes`
+### Contenido del repositorio
 
-| Rama | Contenido | Relación con Marketing Pro |
+| Rama | Contenido | Decisión |
 |---|---|---|
-| `main` (producción del repositorio) | 5 imágenes de Instagram y un README de 12 bytes. | Ninguna. **No hay código ni sistema.** |
-| `claude/kind-allen-iqdiqx` (PR #2) | Solo documentos: el prompt maestro, este plan y las versiones anteriores en `docs/anteriores/`. | Es la especificación. |
-| `claude/wonderful-hamilton-8qgj9v` | Proyecto de video de Año Nuevo en Camboriú. | Ninguna. No se toca. |
+| `main` | 5 imágenes y un README de 12 bytes. | No hay código. No se toca. |
+| `claude/kind-allen-iqdiqx` (PR #2) | Documentos: prompt maestro, esta auditoría y versiones anteriores en `docs/anteriores/`. | Es la especificación del proyecto. |
+| `claude/wonderful-hamilton-8qgj9v` | Video de Camboriú. | Fuera del alcance. No se toca. |
 
-### FULL VIAJES 360 (otra sesión de trabajo)
+**Conclusión:** Marketing Pro **se construye desde cero**. No hay funciones existentes que se puedan romper ni que haya que conservar.
 
-- Sistema de gestión de la agencia con **26 pantallas**: CRM, clientes, viajes, vendedoras y más.
-- Se está adaptando para el hosting de **Ferozo** en `fullviajesyturismo.com/app/`:
-  - interfaz en archivos estáticos;
-  - API en **PHP 8.4**;
-  - base de datos **MySQL**;
-  - sin procesos permanentes.
-- Convive con el **WordPress** del sitio principal.
-- **Su código no está en GitHub.** No se pudo auditar en detalle: lo que figura acá sale de lo visible en esa sesión.
+### Pull Request #2
 
-### Producción real
+- Solo documentos. Sin conflictos con `main`. Sin controles automáticos (CI).
+- Queda en borrador hasta tu aprobación.
 
-- `fullviajesyturismo.com` (WordPress) y la cuenta de Ferozo **no fueron tocados** en ninguna etapa.
+### Cambios aplicados al prompt maestro en este paso
 
----
-
-## 2. Revisión del Pull Request #2
-
-- Solo agrega documentos (Markdown). No modifica ni borra nada existente.
-- Sin conflictos con `main`. El repositorio no tiene controles automáticos (CI).
-- **Si se mezclara, no rompería nada**, porque no hay código. Igual queda en borrador hasta tu aprobación, como pediste.
-- Reorganización hecha en este paso:
-  - `PROMPT_MAESTRO_MARKETING_PRO.md` → documento definitivo (tu texto, sin cambios de contenido).
-  - Documentos anteriores → `docs/anteriores/` (se conservan como historial, no se borró nada).
+- Se agregó el bloque **"Proyecto completamente independiente"** con el alcance definitivo de 10 puntos.
+- **Sección 13:** la medición se limita a consultas generadas, sin datos personales, reservas ni ventas.
+- **Sección 14 (CRM):** eliminada.
+- **Sección 15:** se quitó "CRM" del menú (quedan 12 secciones) y se cambiaron los indicadores de reservas y ventas por aprobadas, rechazadas y consultas por publicación.
+- **Sección 16:** almacenamiento propio, separado de otros sistemas.
+- **Principio final:** la métrica de éxito pasa a ser **consultas** generadas.
 
 ---
 
-## 3. Comparación con `PROMPT_GRUPOS_FACEBOOK.md` (versión anterior)
+## 2. Funcionalidades duplicadas
 
-### 3.1 Lo que el prompt maestro mejora
+- **Con otros sistemas:** ninguna, por definición. Marketing Pro no reutiliza ni replica el CRM, las reservas ni los usuarios de otros proyectos.
+- **Dentro del prompt maestro** (para no construir lo mismo dos veces):
 
-- Proceso **grupo por grupo** en 7 etapas, bien definido.
-- Categoría nueva **APTO**, entre "prioritario" y "en observación".
-- **CRM** con estados claros.
-- Las 13 secciones del dashboard.
-- Regla clave: **no inventar atribuciones** (origen "desconocido").
-- Asociación imagen ↔ promoción (nunca Mendoza con texto de Brasil).
-- Enfoques de redacción (informativo, emocional, familiar, etc.).
+| Duplicación | Recomendación |
+|---|---|
+| Secciones "Imágenes" y "Textos" separadas de "Promociones". | Que sean pestañas dentro de cada promoción, porque cada imagen y cada texto pertenecen a una promoción (regla "nunca Mendoza con texto de Brasil"). A confirmar. |
+| "Publicaciones" e "Historial". | Una sola tabla de publicaciones; "Historial" es la vista con filtros de fechas y estados. |
+| "Grupos excluidos" y la categoría "No recomendado". | Una sola lista de exclusión con el motivo (rechazos, pendientes, reglas, micros/fútbol, manual). |
 
-### 3.2 Detalles que quedaron afuera y conviene recuperar
+---
 
-Propongo sumarlos como **anexo técnico** del prompt maestro, sin cambiar tu texto:
+## 3. Limitaciones de las integraciones de Meta
 
-| # | Detalle de la versión anterior | Por qué importa |
+| Acción | ¿Hay vía oficial? | Qué hace Marketing Pro |
 |---|---|---|
-| 1 | **Concepción del Uruguay primero dentro de la prioridad máxima** (puntaje 100 contra 90 de Colón, Gualeguaychú y Concordia). | En el maestro, Concepción del Uruguay comparte nivel con 5 ciudades. Tu estrategia es "primero dominar Concepción del Uruguay". |
-| 2 | **Puntaje final**: geografía + actividad + reglas + tipo + tamaño + resultados, con más peso de los resultados cuando hay historial. | El maestro dice que el sistema "aprenda de los resultados", pero no cómo combinarlos con la geografía. |
-| 3 | **"Salidas confirmadas desde"**: no decir "salida desde Colón" si no está confirmada. | Evita prometer algo falso en textos por localidad. |
-| 4 | **Textos por localidad** ("¡Desde La Histórica…!"). | Es una de las mejores herramientas comerciales que habías definido. |
-| 5 | **Control de duplicados explícito**: la misma promoción no se publica dos veces en el mismo grupo (ni si está pendiente). | El maestro dice "evitar repetir"; conviene que sea una regla dura de la base de datos. |
-| 6 | **Exclusión por palabra completa** y "revisar" en lugar de excluir para compra y venta. | Evita descartar por error un grupo de compra y venta donde venden "microondas". |
-| 7 | **Estado "detenido por seguridad"**, distinto de "pausado", que solo se levanta con tu revisión. | El maestro dice "detener y esperar la resolución"; el estado lo hace verificable. |
-| 8 | **Frecuencia máxima**: una publicación por grupo por semana, salvo reglas del grupo. | El maestro dice "no saturar", pero sin un número. |
-| 9 | **Unirse a grupos de a pocos por día**, decidido por vos. | Sumarse a muchos grupos de golpe es de lo que más rápido genera restricciones. |
-| 10 | **Canales oficiales** (Página de Facebook, Instagram, anuncios, web). | Son los únicos donde la publicación puede ser 100 % autónoma (ver punto 5). |
+| Listar los grupos donde está unida la cuenta | **No** | Sesión supervisada con Claude en Chrome (solo lectura) o carga manual. |
+| Leer temática, actividad y reglas de un grupo | **No** | Sesión supervisada, de a un grupo (etapas 1 a 4 del maestro). |
+| **Publicar en un grupo** | **No** (Meta eliminó `publish_to_groups` en abril de 2024) | **Preparada para intervención manual** (etapa 5 del maestro): cola "publicar en un toque", unos 20 segundos por grupo. |
+| Saber si quedó aprobada, pendiente o rechazada | **No** | Marcar con un toque al publicar + ronda semanal de revisión. |
+| Abandonar un grupo | **No** | Lista "sugeridos para abandonar"; salís vos con un toque. |
+| Detectar advertencias de Meta | **No** | Claude las ve en pantalla durante las sesiones supervisadas; botón "Facebook me mostró una advertencia" que detiene todo. |
 
-### 3.3 Diferencias de criterio que hay que decidir
+**Lo que esto significa:**
 
-- **Abandono automático de grupos (sección 7).** El maestro lo permite si está habilitado. No hay forma oficial de abandonar un grupo desde un sistema, así que solo podría hacerse manejando Chrome. **Recomendación:** opción deshabilitada por defecto, y abandono con un toque tuyo desde una lista "sugeridos para abandonar".
-- **Zonas.** El maestro movió Gualeguay a complementaria y Liebig a alta (antes estaba al revés). Se toma el maestro como válido.
+- La publicación en grupos nunca va a ser 100 % autónoma de forma autorizada. Con la regla del propio maestro ("publicar únicamente mediante mecanismos autorizados"), queda siempre como intervención manual.
+- La autonomía real está en todo lo demás: analizar, clasificar, priorizar, excluir, elegir imagen y texto, evitar duplicados, armar la cola, registrar y medir.
+- Meta también restringe la **lectura automatizada**. Las sesiones con Claude en Chrome deben ser supervisadas, de bajo volumen y de a un grupo. Aun así, no hay garantía de que Meta no restrinja la cuenta.
 
 ---
 
-## 4. Funcionalidades duplicadas
+## 4. Cómo medir consultas sin CRM
 
-| Función del prompt maestro | Ya existe en FULL VIAJES 360 | Decisión recomendada |
-|---|---|---|
-| **CRM comercial** (sección 14) | Sí: módulo CRM y clientes. | **No crear un segundo CRM.** Usar el existente y agregarle el origen (grupo, campaña, canal) y los estados que falten. |
-| Reservas y ventas | Sí: viajes y reservas. | Vincular, no duplicar. Las ventas por grupo salen de las reservas reales. |
-| Promociones (sección 8) | Parcial: los viajes ya tienen destino, fechas y precio. | La promoción **apunta a un viaje** existente y suma imágenes, textos, WhatsApp y vigencia. Así precios y fechas no se cargan dos veces ni se desincronizan. |
-| Usuarios y permisos | Sí. | Reutilizar el mismo inicio de sesión. |
-| Copias de seguridad | Previstas en FULL VIAJES 360. | Incluir las tablas nuevas en ese mismo respaldo. |
-| Dashboard (sección 15) | El panel existe. | Las 13 secciones se agregan como un menú "Marketing Pro" dentro del panel. **Imágenes** y **Textos** pueden ir dentro de **Promociones** para evitar pantallas repetidas (a confirmar). |
+El alcance pide contar consultas generadas sin gestionar clientes. Propuesta:
 
-**Conclusión:** Marketing Pro se construye como **módulo de FULL VIAJES 360**. Hacerlo aparte duplicaría CRM, reservas, usuarios y promociones.
+1. **Enlace de seguimiento propio por grupo y promoción**, por ejemplo `.../w/G045-P12`. Al tocarlo, el sistema suma un clic y redirige a WhatsApp con el mensaje precargado ("Hola Full Viajes, vi su publicación…" + código).
+   - Mide **intención de consulta** (clics), de forma automática.
+2. **Botón "registrar consulta"**: quien atiende WhatsApp anota solo el código que vino en el mensaje. Sin nombre, sin teléfono, sin datos del cliente.
+   - Mide **consultas reales**.
+3. Si no hay código: origen **desconocido** (regla de la sección 13).
+
+No se guarda ningún dato personal y no se conecta con ningún otro sistema.
 
 ---
 
-## 5. Limitaciones de las integraciones de Meta
+## 5. Arquitectura propuesta (independiente)
 
-| Acción | ¿Hay vía oficial? | Qué hace el sistema |
-|---|---|---|
-| Listar los grupos donde participa la cuenta | **No** | Lectura en sesión supervisada con Claude en Chrome, o carga manual. |
-| Leer reglas, actividad y publicaciones de un grupo | **No** | Igual: sesión supervisada, de a un grupo, solo lectura. |
-| **Publicar en un grupo** | **No** (Meta eliminó `publish_to_groups` en abril de 2024) | **Siempre "preparada para intervención manual"** (etapa 5 del maestro): cola "publicar en un toque", unos 20 segundos por grupo. |
-| Saber si quedó pendiente, aprobada o rechazada | **No** | Marcado con un toque al publicar y ronda semanal de revisión. |
-| Unirse a un grupo o abandonarlo | **No** | Lo hacés vos; el sistema sugiere. |
-| Detectar advertencias de Facebook | **No** para grupos | Claude las ve en pantalla en las sesiones supervisadas; botón "Facebook me mostró una advertencia" en la cola. |
-| Publicar en la **Página** de Full Viajes | **Sí** (`pages_manage_posts`) | 100 % autónomo. |
-| Publicar en **Instagram** profesional | **Sí** (`instagram_content_publish`) | 100 % autónomo. |
-| **Anuncios pagos** | **Sí** (API de Marketing) | Autónomo, con presupuesto máximo. |
+| Componente | Propuesta |
+|---|---|
+| Interfaz | Panel web propio "FULL VIAJES MARKETING PRO", usable desde la computadora y el celular. |
+| Servidor | Carpeta o subdominio propio (por ejemplo, `marketing.fullviajesyturismo.com`), separado del WordPress y de cualquier otro sistema. |
+| Almacenamiento | **Base de datos propia** (MySQL nueva y exclusiva), con usuario propio. No comparte tablas ni credenciales con nada. |
+| Usuarios | Propios del proyecto. |
+| Tareas programadas | Cron del hosting para armar la cola diaria y recalcular clasificaciones. |
+| Claude en Chrome | En tu computadora, en sesiones supervisadas, con un usuario técnico de permisos mínimos en Marketing Pro (lee la cola y registra resultados; no puede reanudar después de una detención por seguridad). |
+| Copias de seguridad | Respaldo diario propio de la base de Marketing Pro. |
 
-**Un riesgo que hay que tener presente:** las condiciones de Meta también restringen la **lectura automatizada** de Facebook (no solo la publicación). Por eso la lectura de grupos con Claude en Chrome tiene que ser en sesiones supervisadas, de bajo volumen y un grupo por vez, como pide el maestro. Ni así se puede garantizar que Meta no restrinja la cuenta. Es el mismo motivo por el que el maestro prioriza la seguridad.
+**Alternativa:** si preferís no usar el hosting de Ferozo, Marketing Pro puede funcionar en otro servidor económico. Lo importante es que tenga su propia base y su propio dominio o carpeta. A decidir.
 
-**Qué significa en la práctica:** con las reglas del propio prompt maestro ("publicar únicamente mediante mecanismos autorizados"), **toda publicación en grupos queda como intervención manual**. La autonomía real está en todo lo demás: análisis, selección, armado, registro, medición y los canales oficiales.
+### Datos que guarda
+
+- **Grupos:** nombre, enlace, localidad, puntaje, tipo, reglas, categoría, motivo de exclusión, historial.
+- **Promociones:** destino, fecha, precio, duración, hotel, comidas, servicios, condiciones, vigencia, imágenes, textos, WhatsApp.
+- **Campañas:** estado (activa, pausada, finalizada o detenida por seguridad).
+- **Publicaciones:** grupo, promoción, imagen y texto usados, fechas, estado. Regla de no duplicar.
+- **Consultas:** código, fecha, origen. Sin datos personales.
+- **Incidencias de Meta.**
+- **Registro de acciones:** quién hizo qué y cuándo.
 
 ---
 
@@ -119,39 +113,40 @@ Propongo sumarlos como **anexo técnico** del prompt maestro, sin cambiar tu tex
 
 | Qué | Estado |
 |---|---|
-| Este repositorio | Todo está versionado en Git: cada estado anterior se puede recuperar. No se borró ningún archivo (las versiones anteriores están en `docs/anteriores/`). |
-| WordPress y hosting de Ferozo | No se tocaron. **Antes de instalar cualquier cosa en el hosting**, hay que hacer una copia completa (archivos + base de WordPress) desde el panel de Ferozo. Es el paso 0 de la implementación. |
-| Base de FULL VIAJES 360 | Antes de agregar tablas, respaldo completo con la herramienta de copias de ese sistema y prueba de restauración. |
+| Este repositorio | Versionado en Git; no se borró nada (versiones anteriores en `docs/anteriores/`). |
+| Otros sistemas de Full Viajes | **No se tocan.** |
+| Hosting (si se usa Ferozo) | Antes de crear la carpeta y la base de Marketing Pro, copia completa del hosting desde el panel de Ferozo, para garantizar que el WordPress no se vea afectado. |
 
 ---
 
 ## 7. Plan de trabajo por módulos
 
-Cada módulo se desarrolla en una rama separada, se prueba con datos de ejemplo y se muestra antes de pasar al siguiente. **Nada va a producción sin tu autorización.**
+Cada módulo en una rama separada, probado y mostrado antes de seguir. **Nada va a producción sin tu autorización.**
 
-| # | Módulo | Contenido | Cómo se comprueba | Depende de |
-|---|---|---|---|---|
-| 0 | **Preparación** | Copias de seguridad del hosting y de FULL VIAJES 360; código de FULL VIAJES 360 en GitHub. | Restauración de prueba. | Otra sesión y vos. |
-| 1 | **Base de datos** | Tablas de grupos, localidades y puntajes, promociones (vinculadas a viajes), imágenes, textos, campañas, publicaciones, incidencias, estado del sistema. Regla de duplicados en la base. | Pruebas automáticas sobre una copia de la base. | 0 |
-| 2 | **Grupos** | Carga (manual o desde una sesión supervisada), clasificación de 5 categorías, puntaje geográfico, exclusiones por palabra completa, lista de excluidos con motivo. | Cargar 20 grupos reales de Concepción del Uruguay y revisar la clasificación con vos. | 1 |
-| 3 | **Promociones y creatividades** | Ficha vinculada al viaje, imágenes y textos asociados, bloqueo de precios y fechas, vigencia automática. | Intentar asociar una imagen a la promoción equivocada debe fallar. | 1 |
-| 4 | **Campañas** | Activar, pausar, reanudar, finalizar, "detenido por seguridad"; armado de la cola diaria respetando prioridad, frecuencia y duplicados. | Simulación de una campaña de 2 semanas con datos de prueba. | 2 y 3 |
-| 5 | **Cola "publicar en un toque"** | Pantalla para el celular: copiar texto, guardar imagen, abrir grupo, marcar resultado. Reparto entre vendedoras (si lo aprobás). | Prueba real con 3 a 5 grupos de Concepción del Uruguay. | 4 |
-| 6 | **Consultas y CRM** | Enlaces de WhatsApp con código por grupo, origen en el CRM existente, origen "desconocido" cuando no se sabe, vínculo con reservas. | Una consulta de prueba de punta a punta hasta una reserva. | 5 |
-| 7 | **Dashboard y estadísticas** | Las 13 secciones e indicadores, ranking de grupos por pasajeros, mapa de cobertura por localidad. | Revisión con vos. | 6 |
-| 8 | **Sesiones supervisadas con Claude en Chrome** | Guía de trabajo grupo por grupo (etapas 1 a 4 y 6), conectada a la API con un usuario de permisos mínimos; freno ante advertencias. | Sesión real supervisada con 5 grupos. | 2 y 7 |
-| 9 | **Canales oficiales (opcional)** | Página de Facebook, Instagram y web automáticos; anuncios con presupuesto máximo. | Publicación de prueba en la Página. | 4 y tu aprobación |
+| # | Módulo | Contenido | Cómo se comprueba |
+|---|---|---|---|
+| 0 | **Preparación** | Elegir dónde se aloja; copia de seguridad del hosting; base de datos y usuario nuevos. | La web actual sigue funcionando igual. |
+| 1 | **Base y estructura** | Tablas propias, inicio de sesión, registro de acciones, respaldo diario. | Pruebas automáticas. |
+| 2 | **Grupos** | Carga, 5 tipos, prioridad geográfica, exclusiones (micros, fútbol, sin relación), categorías del maestro, lista de exclusión con motivo. | Cargar 20 grupos reales de Concepción del Uruguay y revisar la clasificación con vos. |
+| 3 | **Contenido** | Promociones con imágenes y textos asociados, precios y fechas bloqueados, vencimiento automático. | Asociar una imagen a una promoción equivocada debe ser imposible. |
+| 4 | **Campañas** | Activar, pausar, reanudar, finalizar y "detenido por seguridad"; cola diaria grupo por grupo con prioridad, frecuencia y control de duplicados; alternancia de creatividades. | Simulación de 2 semanas con datos de prueba. |
+| 5 | **Cola "publicar en un toque"** | Pantalla para el celular con texto, imagen, enlace al grupo y botones de resultado; depuración automática según los parámetros del maestro. | Prueba real con 3 a 5 grupos. |
+| 6 | **Consultas y estadísticas** | Enlaces de seguimiento, registro de consultas por código, dashboard con los indicadores del maestro. | Una consulta de prueba de punta a punta. |
+| 7 | **Sesiones supervisadas con Claude en Chrome** | Guía de trabajo grupo por grupo (etapas 1 a 7) conectada a Marketing Pro; freno ante advertencias. | Sesión real supervisada con 5 grupos. |
 
-**Orden de valor:** con los módulos 1 a 6 ya se sabe **qué grupos traen pasajeros**, que es la métrica de éxito del prompt maestro.
+**Quedan fuera del alcance:** CRM, reservas, ventas, conexión con FULL VIAJES 360, Página de Facebook, Instagram y anuncios pagos.
 
 ---
 
 ## 8. Decisiones pendientes
 
-1. **Toque manual en grupos:** ¿aceptás que publicar en grupos quede como intervención manual (unos 20 segundos por grupo), que es lo que exige el propio prompt maestro al no haber una vía autorizada?
-2. **Vendedoras:** ¿se puede repartir la cola entre ellas?
-3. **Canales oficiales:** ¿sumamos Página de Facebook, Instagram y web automáticos? ¿Anuncios pagos? ¿Con qué presupuesto máximo por día?
-4. **Abandono de grupos:** ¿lo dejamos deshabilitado y con un toque tuyo, como se recomienda?
-5. **Anexo técnico:** ¿agrego los 10 detalles del punto 3.2 como anexo del prompt maestro?
-6. **Módulo de FULL VIAJES 360:** ¿confirmás que se construye ahí, reutilizando CRM, viajes y usuarios?
-7. **Código de FULL VIAJES 360:** hace falta subirlo a GitHub para auditarlo antes de empezar el módulo 1.
+1. **Toque manual en grupos:** ¿aceptás que publicar en grupos quede como intervención manual (unos 20 segundos por grupo), que es lo que exige el propio maestro al no haber una vía autorizada?
+2. **Dónde se aloja:** ¿carpeta o subdominio propio en Ferozo, con base de datos nueva y exclusiva, u otro servidor?
+3. **Quién publica:** ¿solo vos, o también personas del equipo desde sus cuentas?
+4. **Abandono de grupos:** ¿deshabilitado y con un toque tuyo, como se recomienda?
+5. **Medición de consultas:** ¿te sirve la propuesta del punto 4 (clics automáticos + registro del código, sin datos personales)?
+6. **Ajustes técnicos dentro del alcance:** ¿sumamos estos detalles de la versión anterior?
+   - Concepción del Uruguay primero dentro de la prioridad máxima.
+   - Una publicación por grupo por semana como máximo.
+   - Exclusión por palabra completa (para no descartar "microondas").
+   - Textos por localidad sin prometer salidas no confirmadas.
