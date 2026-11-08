@@ -41,3 +41,22 @@ Los recortes de la cara y el audio de referencia de la voz **no** se suben a est
 ## Pendientes y notas
 - La remera oficial de Full Viajes: no había una foto real de Mariano con la remera, así que aparece con su **gorra Full Viajes real** y la remera verde de su video. Para no inventar un logo, no se generó una remera falsa.
 - Volver a renderizar: `python3 SCRIPTS/mktext.py && python3 SCRIPTS/build.py` (desde una carpeta con s1–s5.mp4, music.mp3, endcard.png y txt/).
+
+---
+
+# Versión 2 (`V2/`): material real + doble digital
+32 s, 1080×1920, 30 fps. **Gasto: 156 créditos** (saldo: 1.844,89 → 1.688,88).
+
+| Tiempo | Plano | Origen |
+|---|---|---|
+| 0–4 | Vista aérea de la multitud en Camboriú | **Real**: video de Rio Uruguay Bus (con su permiso). Le saqué la marca de agua rellenando esa zona con lo que se ve en los cuadros vecinos |
+| 4–8,9 | La vuelta al mundo marca 5-4-3-2-1 de verdad; gritos de la multitud sincronizados | **Real** + gritos del conteo de la v1 |
+| 8,75 | **CERO**: "¡FELIZ 2027!" | — |
+| 8,9–14,5 | Fuegos sobre la bahía y gente real en la orilla | **Real** (Rio Uruguay Bus) + etiqueta "📍 Balneário Camboriú" |
+| 14,5–21,5 | Pasajera en el mar, fuegos y brindis | **Real**: video de pasajera (autorizado) |
+| 21,5–28,7 | Mariano en modo selfie: "¡Vos qué estás esperando para venir a pasar Año Nuevo así con Full Viajes!" | Doble digital (Intone): foto real de Mariano en Camboriú + cuadro real de la playa como fondo + voz clonada |
+| 28,7–32,3 | Placa de cierre con el flyer | Flyer original |
+
+Postproducción: corrección de color unificada, grano, viñeta, ambiente y fuegos generados como efectos de sonido, choque de copas, música con el golpe justo en el cero y bajada de música cuando habla Mariano; mezcla a −13,8 LUFS.
+No se usó el audio original de los videos (tenían música de terceros) ni los videos de eltrece y de Río.
+Pendiente: el texto exacto del eslogan y las sucursales para la placa final.
