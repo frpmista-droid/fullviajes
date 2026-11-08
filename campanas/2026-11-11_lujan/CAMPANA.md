@@ -19,7 +19,7 @@
 
 ### Datos pendientes (sin estos no se publica)
 
-- [ ] **Número de WhatsApp** para las consultas.
+- [x] **WhatsApp:** 3442 612146 (enlace: https://wa.me/5493442612146).
 - [x] **El viaje es para la visita del Papa León XIV** (confirmado por la dirección el 8/11). La prensa confirma la misa del miércoles 11 a las 10:00 en la plaza de la Basílica. Los textos pueden nombrar al Papa, sin prometer cercanía ni ubicación dentro del predio.
 - [ ] **Desde dónde sale y a qué hora** (opcional). Si no se confirma, los textos no mencionan ninguna localidad de salida.
 

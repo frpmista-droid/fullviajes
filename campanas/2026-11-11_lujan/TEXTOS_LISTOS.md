@@ -1,6 +1,6 @@
 # Textos listos para pegar — Luján con el Papa (miércoles 11/11)
 
-Reemplazar **[WHATSAPP]** por el número antes de publicar.
+WhatsApp: **3442 612146**. Cada texto lleva además un enlace directo a WhatsApp con un código (CdU-1, COL, etc.) en el mensaje precargado, para saber de qué texto y localidad vino cada consulta. Si alguien escribe sin código, el origen queda como desconocido.
 Datos fijos: miércoles 11 de noviembre · 2 lugares por $150.000 en total ($75.000 por persona viajando de a dos) · transporte ida y vuelta · coordinación permanente.
 Rotación sugerida: no repetir la misma combinación de texto e imagen en dos grupos seguidos de la misma localidad. Nunca publicar dos veces en el mismo grupo.
 
@@ -17,7 +17,8 @@ El miércoles 11 de noviembre el Papa León XIV estará en Luján, y queremos qu
 
 💛 Promo especial: 2 lugares por $150.000 en total ($75.000 por persona viajando de a dos).
 
-📲 Escribinos al WhatsApp [WHATSAPP] y te contamos cómo reservar.
+📲 Escribinos al WhatsApp 3442 612146 y te contamos cómo reservar.
+👉 https://wa.me/5493442612146?text=Hola%20Full%20Viajes%2C%20quiero%20info%20del%20viaje%20a%20Luj%C3%A1n%20%28CdU-1%29
 
 Full Viajes y Turismo 💙💛
 
@@ -34,7 +35,8 @@ Con mamá, con papá, con tu pareja, con un amigo o con alguien especial… El m
 
 🎁 Promo para compartir: 2 lugares por $150.000 en total. ¡$75.000 cada uno viajando de a dos!
 
-📲 Consultanos por WhatsApp al [WHATSAPP].
+📲 Consultanos por WhatsApp al 3442 612146.
+👉 https://wa.me/5493442612146?text=Hola%20Full%20Viajes%2C%20quiero%20info%20del%20viaje%20a%20Luj%C3%A1n%20%28CdU-2%29
 
 Full Viajes y Turismo, desde La Histórica 💙💛
 
@@ -49,7 +51,8 @@ Este miércoles 11 de noviembre compartimos una jornada de fe y emoción en la B
 💥 Promo para dos personas: 2 lugares por solo $150.000 en total ($75.000 cada uno).
 Incluye traslado ida y vuelta y coordinación permanente.
 
-💬 Consultá y reservá tus dos lugares por WhatsApp: [WHATSAPP]
+💬 Consultá y reservá tus dos lugares por WhatsApp: 3442 612146
+👉 https://wa.me/5493442612146?text=Hola%20Full%20Viajes%2C%20quiero%20info%20del%20viaje%20a%20Luj%C3%A1n%20%28CdU-3%29
 
 ¡Vení a vivir esta experiencia con Full Viajes y Turismo! 🙌
 
@@ -65,7 +68,8 @@ El miércoles 11 de noviembre el Papa León XIV visita Luján y viajamos para es
 
 💛 2 lugares por $150.000 en total ($75.000 por persona viajando de a dos).
 
-📲 Escribinos al WhatsApp [WHATSAPP] y te pasamos toda la información.
+📲 Escribinos al WhatsApp 3442 612146 y te pasamos toda la información.
+👉 https://wa.me/5493442612146?text=Hola%20Full%20Viajes%2C%20quiero%20info%20del%20viaje%20a%20Luj%C3%A1n%20%28COL%29
 
 Full Viajes y Turismo 💙💛
 
@@ -80,7 +84,8 @@ El miércoles 11 de noviembre viajamos con Full Viajes a vivir esta jornada tan 
 🚌 Ida y vuelta, con coordinación permanente
 🎁 2 lugares por $150.000 en total, $75.000 cada uno viajando de a dos
 
-📲 Consultas y reservas por WhatsApp: [WHATSAPP]
+📲 Consultas y reservas por WhatsApp: 3442 612146
+👉 https://wa.me/5493442612146?text=Hola%20Full%20Viajes%2C%20quiero%20info%20del%20viaje%20a%20Luj%C3%A1n%20%28SJ%29
 
 Full Viajes y Turismo 🙏
 
@@ -96,7 +101,8 @@ El miércoles 11 de noviembre el Papa León XIV estará en Luján, y te invitamo
 🤝 Coordinación permanente
 👥 2 lugares por $150.000 en total ($75.000 por persona)
 
-📲 Escribinos al [WHATSAPP] y te contamos cómo reservar.
+📲 Escribinos al 3442 612146 y te contamos cómo reservar.
+👉 https://wa.me/5493442612146?text=Hola%20Full%20Viajes%2C%20quiero%20info%20del%20viaje%20a%20Luj%C3%A1n%20%28VE%29
 
 Full Viajes y Turismo 💛
 
@@ -111,7 +117,8 @@ El miércoles 11 de noviembre viajamos a Luján para la visita del Papa León XI
 🚌 Traslado ida y vuelta y coordinación permanente.
 🔥 Promo para dos: 2 lugares por $150.000 en total ($75.000 cada uno).
 
-💬 Consultas y reservas por WhatsApp: [WHATSAPP]
+💬 Consultas y reservas por WhatsApp: 3442 612146
+👉 https://wa.me/5493442612146?text=Hola%20Full%20Viajes%2C%20quiero%20info%20del%20viaje%20a%20Luj%C3%A1n%20%28GCHU%29
 
 Full Viajes y Turismo 💙💛
 
@@ -126,7 +133,8 @@ El miércoles 11 de noviembre nos vamos a Luján, justo para la visita del Papa 
 🚌 Ida y vuelta, con coordinación permanente
 💛 2 lugares por $150.000 en total — $75.000 por persona viajando de a dos
 
-📲 Escribinos por WhatsApp al [WHATSAPP] y te contamos todo.
+📲 Escribinos por WhatsApp al 3442 612146 y te contamos todo.
+👉 https://wa.me/5493442612146?text=Hola%20Full%20Viajes%2C%20quiero%20info%20del%20viaje%20a%20Luj%C3%A1n%20%28CON%29
 
 Full Viajes y Turismo
 
@@ -141,6 +149,7 @@ El miércoles 11 de noviembre nos vamos a Luján para la visita del Papa León X
 🚌 Transporte ida y vuelta y coordinación permanente.
 👥 Promo: 2 lugares por $150.000 en total ($75.000 por persona viajando de a dos).
 
-📲 ¿Querés sumarte? Escribinos al WhatsApp [WHATSAPP].
+📲 ¿Querés sumarte? Escribinos al WhatsApp 3442 612146.
+👉 https://wa.me/5493442612146?text=Hola%20Full%20Viajes%2C%20quiero%20info%20del%20viaje%20a%20Luj%C3%A1n%20%28ER%29
 
 Full Viajes y Turismo ✈️
